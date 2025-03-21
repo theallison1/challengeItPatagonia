@@ -21,13 +21,10 @@ Este proyecto es una solución backend desarrollada en **Spring Boot** para gest
    cd challenge-backend
 Instalar dependencias:
 
-bash
-Copy
+
 mvn clean install
 Ejecutar la aplicación:
 
-bash
-Copy
 mvn spring-boot:run
 La aplicación estará disponible en http://localhost:8080.
 
@@ -58,8 +55,7 @@ Ruta: /empresas/adherir
 
 Body:
 
-json
-Copy
+
 {
   "cuit": "30-12345678-9",
   "razonSocial": "Empresa Ejemplo",
@@ -82,8 +78,7 @@ Ruta: /empresas/adheridas-ultimo-mes
 
 Respuesta:
 
-json
-Copy
+
 [
   {
     "id": 1,
@@ -99,8 +94,8 @@ Ruta: /empresas/transferencias-ultimo-mes
 
 Respuesta:
 
-json
-Copy
+
+
 [
   {
     "id": 1,
@@ -116,8 +111,7 @@ Ruta: /transferencias
 
 Body:
 
-json
-Copy
+
 {
   "importe": 1000.50,
   "cuentaDebito": "123456",
@@ -128,7 +122,7 @@ Copy
 Respuesta:
 
 json
-Copy
+
 {
   "id": 1,
   "importe": 1000.50,
@@ -148,8 +142,7 @@ Pruebas
 Pruebas Unitarias
 Las pruebas unitarias se encuentran en el directorio src/test/java. Para ejecutarlas:
 
-bash
-Copy
+
 mvn test
 Pruebas de Integración
 Las pruebas de integración también están en src/test/java. Se ejecutan junto con las pruebas unitarias.
