@@ -1,12 +1,10 @@
 package com.example.challenge.domain.model;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 public class Empresa {
     @Id
@@ -15,6 +13,11 @@ public class Empresa {
     private String cuit;
     private String razonSocial;
     private LocalDate fechaAdhesion;
+
+    // Relación bidireccional con Transferencia
+    @OneToMany(mappedBy = "empresa", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference // Indica que esta es la parte "manejada" de la relación
+    private List<Transferencia> transferencias;
 
     // Constructor, getters y setters
 
@@ -48,5 +51,13 @@ public class Empresa {
 
     public void setFechaAdhesion(LocalDate fechaAdhesion) {
         this.fechaAdhesion = fechaAdhesion;
+    }
+
+    public List<Transferencia> getTransferencias() {
+        return transferencias;
+    }
+
+    public void setTransferencias(List<Transferencia> transferencias) {
+        this.transferencias = transferencias;
     }
 }
