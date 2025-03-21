@@ -161,3 +161,6 @@ Contraseña: (vacío)
 Licencia
 Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
 
+
+
+Nota: Aunque la consigna no lo especifica, se ha agregado un endpoint adicional (POST /transferencias) para permitir la creación de transferencias. Esto es necesario para que el endpoint de listar empresas que hicieron transferencias en los últimos 30 días (GET /empresas/transferencias-ultimo-mes) tenga datos para devolver y sea funcional. Este enfoque asegura que la solución sea completa y práctica.
