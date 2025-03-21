@@ -63,8 +63,7 @@ Body:
 }
 Respuesta:
 
-json
-Copy
+
 {
   "id": 1,
   "cuit": "30-12345678-9",
