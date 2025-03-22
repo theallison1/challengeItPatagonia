@@ -190,4 +190,6 @@ Completa los campos necesarios (si aplica) y haz clic en Execute para enviar la 
 
 Revisa la respuesta de la API, incluyendo el código de estado y el cuerpo de la respuesta.
 
+(puede demorar 50 segundos en arrancar por que la version es gratuita) xD
+
 
