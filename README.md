@@ -191,5 +191,7 @@ Completa los campos necesarios (si aplica) y haz clic en Execute para enviar la 
 Revisa la respuesta de la API, incluyendo el código de estado y el cuerpo de la respuesta.
 
 (puede demorar 50 segundos en arrancar por que la version es gratuita) xD
+Su instancia gratuita dejará de funcionar por inactividad, lo que puede retrasar las solicitudes 50 segundos o más.
+
 
 
