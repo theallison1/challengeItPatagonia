@@ -1,11 +1,17 @@
 package com.example.challenge.application.dto;
 
 import java.time.LocalDate;
+import jakarta.validation.constraints.*;
+
 
 public class TransferenciaDTO {
+    @NotNull(message = "El campo 'monto' no puede ser nulo")
+    @Positive(message = "El campo 'monto' debe ser un número positivo")
     private Double importe;
     private Long idEmpresa;
+    @NotBlank(message = "El campo  no puede estar vacío")
     private String cuentaDebito;
+    @NotBlank(message = "El campo  no puede estar vacío")
     private String cuentaCredito;
     private LocalDate fechaTransferencia;
 
