@@ -23,7 +23,7 @@ public class TransferenciaController {
     }
 
     @PostMapping
-    public ResponseEntity<TransferenciaDTO> crearTransferencia(@Valid @RequestBody TransferenciaDTO transferenciaDTO) {
+    public ResponseEntity<?> crearTransferencia(@Valid @RequestBody TransferenciaDTO transferenciaDTO) {
         TransferenciaDTO transferenciaGuardada = transferenciaService.guardarTransferencia(transferenciaDTO);
         return ResponseEntity.ok(transferenciaGuardada);
     }

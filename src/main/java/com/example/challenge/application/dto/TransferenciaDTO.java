@@ -13,6 +13,7 @@ public class TransferenciaDTO {
     private String cuentaDebito;
     @NotBlank(message = "El campo  no puede estar vacío")
     private String cuentaCredito;
+    @NotNull(message = "El campo 'fechaTransferencia' no puede ser nulo")
     private LocalDate fechaTransferencia;
 
     // Constructor vacío (necesario para deserialización JSON)
