@@ -15,7 +15,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DataJpaTest
-public class TransferenciaRepositoryTest {
+ class TransferenciaRepositoryTest {
 
     @Autowired
     private TransferenciaRepository transferenciaRepository;
@@ -27,7 +27,7 @@ public class TransferenciaRepositoryTest {
     private TestEntityManager entityManager; // Para gestionar la persistencia en pruebas
 
     @Test
-    public void testFindEmpresasConTransferenciasEntre() {
+     void testFindEmpresasConTransferenciasEntre() {
         // Configurar datos de prueba
         LocalDate now = LocalDate.now();
         LocalDate lastMonth = now.minusMonths(1);

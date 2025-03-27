@@ -6,6 +6,10 @@ import com.example.challenge.domain.model.Empresa;
 import com.example.challenge.domain.model.Transferencia;
 
 public class Mapper {
+    private Mapper() {
+        throw new IllegalStateException("Utility class");
+
+    }
 
     // Convierte EmpresaDTO a Empresa (entidad)
     public static Empresa toEmpresa(EmpresaDTO empresaDTO) {

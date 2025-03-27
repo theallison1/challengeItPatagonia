@@ -17,7 +17,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class EmpresaServiceTest {
+ class EmpresaServiceTest {
 
     @Mock
     private EmpresaRepository empresaRepository;
@@ -26,7 +26,7 @@ public class EmpresaServiceTest {
     private EmpresaServiceImpl empresaService;
 
     @Test
-    public void testFindEmpresasAdheridasEntre() {
+     void testFindEmpresasAdheridasEntre() {
         // Configurar datos de prueba
         LocalDate now = LocalDate.now();
         LocalDate lastMonth = now.minusMonths(1);
