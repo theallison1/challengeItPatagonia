@@ -1,20 +1,10 @@
 package com.example.challenge.application.dto;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
 import java.time.LocalDate;
 
 public class EmpresaDTO {
-
-    @NotBlank(message = "El campo 'cuit' no puede estar vacío")
-    @Pattern(regexp = "\\d{11}", message = "El CUIT debe tener 11 dígitos")
     private String cuit;
-
-    @NotBlank(message = "El campo 'razonSocial' no puede estar vacío")
     private String razonSocial;
-
-    @NotNull(message = "El campo 'fechaAdhesion' no puede ser nulo")
     private LocalDate fechaAdhesion;
 
     // Constructor vacío (necesario para deserialización JSON)
