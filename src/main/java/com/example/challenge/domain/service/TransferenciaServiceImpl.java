@@ -40,7 +40,7 @@ public class TransferenciaServiceImpl {
     @Transactional
     public TransferenciaDTO guardarTransferencia(TransferenciaDTO transferenciaDTO) {
         // Busca la empresa asociada
-        Empresa empresa = empresaRepository.findById(transferenciaDTO.getIdEmpresa())
+        Empresa empresa = empresaRepository.findById(transferenciaDTO.idEmpresa())
                 .orElseThrow(() -> new RuntimeException("Empresa no encontrada"));
 
         // Convierte el DTO a entidad

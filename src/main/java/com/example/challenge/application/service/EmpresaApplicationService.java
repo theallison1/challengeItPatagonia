@@ -20,20 +20,19 @@ public class EmpresaApplicationService {
     public EmpresaDTO adherirEmpresa(EmpresaDTO empresaDTO) {
         // Convertir DTO a entidad de dominio
         Empresa empresa = new Empresa();
-        empresa.setCuit(empresaDTO.getCuit());
-        empresa.setRazonSocial(empresaDTO.getRazonSocial());
+        empresa.setCuit(empresaDTO.cuit());  // Cambiado de getCuit() a cuit()
+        empresa.setRazonSocial(empresaDTO.razonSocial());  // Cambiado de getRazonSocial() a razonSocial()
         empresa.setFechaAdhesion(LocalDate.now()); // Fecha de adhesión automática
 
         // Llamar al servicio de dominio
         Empresa empresaAdherida = empresaService.adherirEmpresa(empresa);
 
-        // Convertir entidad a DTO
-        EmpresaDTO responseDTO = new EmpresaDTO();
-        responseDTO.setCuit(empresaAdherida.getCuit());
-        responseDTO.setRazonSocial(empresaAdherida.getRazonSocial());
-        responseDTO.setFechaAdhesion(empresaAdherida.getFechaAdhesion());
-
-        return responseDTO;
+        // Convertir entidad a DTO (usando constructor del record)
+        return new EmpresaDTO(
+                empresaAdherida.getCuit(),
+                empresaAdherida.getRazonSocial(),
+                empresaAdherida.getFechaAdhesion()
+        );
     }
 
     public List<Empresa> getEmpresasAdheridasUltimoMes() {
