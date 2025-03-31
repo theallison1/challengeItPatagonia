@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class TransferenciaServiceImpl {
@@ -41,7 +40,7 @@ public class TransferenciaServiceImpl {
     @Transactional
     public TransferenciaDTO guardarTransferencia(TransferenciaDTO transferenciaDTO) {
         // Busca la empresa asociada
-        Empresa empresa = empresaRepository.findById(transferenciaDTO.getIdEmpresa())
+        Empresa empresa = empresaRepository.findById(transferenciaDTO.idEmpresa())
                 .orElseThrow(() -> new RuntimeException("Empresa no encontrada"));
 
         // Convierte el DTO a entidad
@@ -65,6 +64,6 @@ public class TransferenciaServiceImpl {
         // Convierte las entidades a DTOs
         return empresas.stream()
                 .map(Mapper::toEmpresaDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 }

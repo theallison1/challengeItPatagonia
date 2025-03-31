@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class TransferenciaServiceImplTest {
+ class TransferenciaServiceImplTest {
 
     @Mock
     private TransferenciaRepository transferenciaRepository;
@@ -25,7 +25,7 @@ public class TransferenciaServiceImplTest {
     private TransferenciaServiceImpl transferenciaService;
 
     @Test
-    public void testFindEmpresasConTransferenciasEntre() {
+     void testFindEmpresasConTransferenciasEntre() {
         // Datos de prueba
         LocalDate start = LocalDate.now().minusMonths(1);
         LocalDate end = LocalDate.now();

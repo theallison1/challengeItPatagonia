@@ -63,8 +63,7 @@ Body:
 }
 Respuesta:
 
-json
-Copy
+
 {
   "id": 1,
   "cuit": "30-12345678-9",
@@ -164,3 +163,35 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más 
 
 
 Nota: Aunque la consigna no lo especifica, se ha agregado un endpoint adicional (POST /transferencias) para permitir la creación de transferencias. Esto es necesario para que el endpoint de listar empresas que hicieron transferencias en los últimos 30 días (GET /empresas/transferencias-ultimo-mes) tenga datos para devolver y sea funcional. Este enfoque asegura que la solución sea completa y práctica.
+
+
+
+nuevo branch render-------------------------------------------------
+
+
+Despliegue en Render
+Esta aplicación ha sido desplegada en Render, lo que permite probar la API en un entorno real sin necesidad de configurar un entorno local. Puedes acceder a la aplicación en el siguiente enlace:
+
+URL de la Aplicación: https://challengeitpatagonia.onrender.com
+
+Documentación de la API con Swagger
+La documentación interactiva de la API está disponible a través de Swagger UI. Puedes explorar y probar los endpoints directamente desde tu navegador:
+
+Swagger UI: https://challengeitpatagonia.onrender.com/swagger-ui/index.html#/
+
+Cómo Usar Swagger:
+Abre el enlace de Swagger UI en tu navegador.
+
+Explora los endpoints disponibles (por ejemplo, POST /empresas/adherir, GET /empresas/adheridas-ultimo-mes, etc.).
+
+Haz clic en Try it out para probar cualquier endpoint.
+
+Completa los campos necesarios (si aplica) y haz clic en Execute para enviar la solicitud.
+
+Revisa la respuesta de la API, incluyendo el código de estado y el cuerpo de la respuesta.
+
+(puede demorar 50 segundos en arrancar por que la version es gratuita) xD
+Su instancia gratuita dejará de funcionar por inactividad, lo que puede retrasar las solicitudes 50 segundos o más.
+
+
+

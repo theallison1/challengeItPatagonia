@@ -1,33 +1,37 @@
 package com.example.challenge.application.mapper;
 
+
 import com.example.challenge.application.dto.EmpresaDTO;
 import com.example.challenge.application.dto.TransferenciaDTO;
 import com.example.challenge.domain.model.Empresa;
 import com.example.challenge.domain.model.Transferencia;
 
 public class Mapper {
+    private Mapper() {
+        throw new IllegalStateException("Utility class");
+    }
 
-    // Convierte EmpresaDTO a Empresa (entidad)
+    // EmpresaDTO (record) → Empresa
     public static Empresa toEmpresa(EmpresaDTO empresaDTO) {
         Empresa empresa = new Empresa();
-        empresa.setCuit(empresaDTO.getCuit());
-        empresa.setRazonSocial(empresaDTO.getRazonSocial());
-        empresa.setFechaAdhesion(empresaDTO.getFechaAdhesion());
+        empresa.setCuit(empresaDTO.cuit());
+        empresa.setRazonSocial(empresaDTO.razonSocial());
+        empresa.setFechaAdhesion(empresaDTO.fechaAdhesion());
         return empresa;
     }
 
-    // Convierte TransferenciaDTO a Transferencia (entidad)
+    // TransferenciaDTO (record) → Transferencia
     public static Transferencia toTransferencia(TransferenciaDTO transferenciaDTO, Empresa empresa) {
         Transferencia transferencia = new Transferencia();
-        transferencia.setImporte(transferenciaDTO.getImporte());
-        transferencia.setCuentaDebito(transferenciaDTO.getCuentaDebito());
-        transferencia.setCuentaCredito(transferenciaDTO.getCuentaCredito());
-        transferencia.setFechaTransferencia(transferenciaDTO.getFechaTransferencia());
-        transferencia.setEmpresa(empresa); // Asocia la empresa
+        transferencia.setImporte(transferenciaDTO.importe());
+        transferencia.setCuentaDebito(transferenciaDTO.cuentaDebito());
+        transferencia.setCuentaCredito(transferenciaDTO.cuentaCredito());
+        transferencia.setFechaTransferencia(transferenciaDTO.fechaTransferencia());
+        transferencia.setEmpresa(empresa);
         return transferencia;
     }
 
-    // Convierte Empresa (entidad) a EmpresaDTO
+    // Empresa → EmpresaDTO (record)
     public static EmpresaDTO toEmpresaDTO(Empresa empresa) {
         return new EmpresaDTO(
                 empresa.getCuit(),
@@ -36,11 +40,11 @@ public class Mapper {
         );
     }
 
-    // Convierte Transferencia (entidad) a TransferenciaDTO
+    // Transferencia → TransferenciaDTO (record)
     public static TransferenciaDTO toTransferenciaDTO(Transferencia transferencia) {
         return new TransferenciaDTO(
                 transferencia.getImporte(),
-                transferencia.getEmpresa().getId(), // Asume que la empresa está asociada
+                transferencia.getEmpresa().getId(),
                 transferencia.getCuentaDebito(),
                 transferencia.getCuentaCredito(),
                 transferencia.getFechaTransferencia()

@@ -20,7 +20,18 @@ public class Transferencia {
     @JsonBackReference // Indica que esta es la parte "respaldada" de la relación
     private Empresa empresa;
 
-    // Getters y setters
+    public Transferencia() {
+    }
+
+    public Transferencia(String cuentaDebito, Long id, Double importe, String cuentaCredito, LocalDate fechaTransferencia, Empresa empresa) {
+        this.cuentaDebito = cuentaDebito;
+        this.id = id;
+        this.importe = importe;
+        this.cuentaCredito = cuentaCredito;
+        this.fechaTransferencia = fechaTransferencia;
+        this.empresa = empresa;
+    }
+// Getters y setters
 
     public Long getId() {
         return id;
