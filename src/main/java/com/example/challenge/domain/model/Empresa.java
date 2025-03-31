@@ -21,6 +21,17 @@ public class Empresa {
 
     // Constructor, getters y setters
 
+    public Empresa() {
+    }
+
+    public Empresa(Long id, String cuit, String razonSocial, LocalDate fechaAdhesion, List<Transferencia> transferencias) {
+        this.id = id;
+        this.cuit = cuit;
+        this.razonSocial = razonSocial;
+        this.fechaAdhesion = fechaAdhesion;
+        this.transferencias = transferencias;
+    }
+
     public Long getId() {
         return id;
     }
