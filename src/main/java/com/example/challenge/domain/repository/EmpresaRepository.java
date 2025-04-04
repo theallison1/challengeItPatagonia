@@ -15,7 +15,7 @@ public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
     @Query("SELECT DISTINCT e FROM Empresa e " +
             "JOIN e.transferencias t " +
             "WHERE t.fechaTransferencia BETWEEN :fechaInicio AND :fechaFin")
-    List<Empresa> findEmpresasConTransferenciasEnUltimoMes(
+            List<Empresa> findEmpresasConTransferenciasEnUltimoMes(
             @Param("fechaInicio") LocalDate fechaInicio,
             @Param("fechaFin") LocalDate fechaFin
     );

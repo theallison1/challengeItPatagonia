@@ -1,8 +1,8 @@
 package com.example.challenge.domain.service;
 
+import com.example.challenge.adapter.out.mapper.Mapper;
 import com.example.challenge.application.dto.EmpresaDTO;
 import com.example.challenge.application.dto.TransferenciaDTO;
-import com.example.challenge.application.mapper.Mapper;
 import com.example.challenge.domain.model.Empresa;
 import com.example.challenge.domain.model.Transferencia;
 import com.example.challenge.domain.repository.EmpresaRepository;
@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Service
-public class TransferenciaServiceImpl {
+public class TransferenciaServiceImpl implements TransferenciaService {
 
     private final TransferenciaRepository transferenciaRepository;
     private final  EmpresaRepository empresaRepository;
