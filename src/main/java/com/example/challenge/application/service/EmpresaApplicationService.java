@@ -2,7 +2,7 @@ package com.example.challenge.application.service;
 
 import com.example.challenge.application.dto.EmpresaDTO;
 import com.example.challenge.domain.model.Empresa;
-import com.example.challenge.domain.service.EmpresaService;
+import com.example.challenge.application.port.in.EmpresaService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

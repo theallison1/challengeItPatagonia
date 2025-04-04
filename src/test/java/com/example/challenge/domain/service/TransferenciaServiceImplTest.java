@@ -1,5 +1,6 @@
 package com.example.challenge.domain.service;
 
+import com.example.challenge.application.service.TransferenciaServiceImpl;
 import com.example.challenge.domain.model.Empresa;
 import com.example.challenge.domain.repository.TransferenciaRepository;
 import org.junit.jupiter.api.Test;

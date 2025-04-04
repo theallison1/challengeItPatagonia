@@ -2,7 +2,7 @@ package com.example.challenge.infrastructure.web;
 
 import com.example.challenge.application.dto.EmpresaDTO;
 import com.example.challenge.application.dto.TransferenciaDTO;
-import com.example.challenge.domain.service.TransferenciaServiceImpl;
+import com.example.challenge.application.service.TransferenciaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

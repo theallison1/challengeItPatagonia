@@ -1,4 +1,4 @@
-package com.example.challenge.domain.service;
+package com.example.challenge.application.port.in;
 
 
 import com.example.challenge.application.dto.EmpresaDTO;

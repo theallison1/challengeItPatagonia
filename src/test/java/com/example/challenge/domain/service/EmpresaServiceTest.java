@@ -1,5 +1,6 @@
 package com.example.challenge.domain.service;
 
+import com.example.challenge.application.service.EmpresaServiceImpl;
 import com.example.challenge.domain.model.Empresa;
 import com.example.challenge.domain.repository.EmpresaRepository;
 import org.junit.jupiter.api.Test;

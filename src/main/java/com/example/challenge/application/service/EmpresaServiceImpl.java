@@ -1,5 +1,6 @@
-package com.example.challenge.domain.service;
+package com.example.challenge.application.service;
 
+import com.example.challenge.application.port.in.EmpresaService;
 import com.example.challenge.domain.model.Empresa;
 import com.example.challenge.domain.repository.EmpresaRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,9 @@
-package com.example.challenge.domain.service;
+package com.example.challenge.application.service;
 
 import com.example.challenge.adapter.out.mapper.Mapper;
 import com.example.challenge.application.dto.EmpresaDTO;
 import com.example.challenge.application.dto.TransferenciaDTO;
+import com.example.challenge.application.port.in.TransferenciaService;
 import com.example.challenge.domain.model.Empresa;
 import com.example.challenge.domain.model.Transferencia;
 import com.example.challenge.domain.repository.EmpresaRepository;
